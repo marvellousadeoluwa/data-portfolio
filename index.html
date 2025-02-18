@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: #1e1e1e;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #2575fc;
+        }
+        #hero {
+            padding: 100px 20px;
+            background: linear-gradient(to right, #3a3a3a, #1e1e1e);
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .cta {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #2575fc;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .cta:hover {
+            transform: scale(1.1);
+        }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .project {
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+            text-align: left;
+            max-width: 300px;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <h2>Welcome to My Data Portfolio</h2>
+        <p>Showcasing impactful data projects and insights.</p>
+        <a href="#projects" class="cta">View Projects</a>
+    </section>
+    
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="titanic_dashboard.jpg" alt="Titanic Analysis Dashboard">
+                <h3>Titanic Analysis</h3>
+                <p>Exploring survival factors using data analytics.</p>
+                <a href="#">View Details</a>
+            </div>
+            <div class="project">
+                <img src="hr_attrition_dashboard.jpg" alt="HR Attrition Analysis Dashboard">
+                <h3>Human Resource (Attrition) Analysis</h3>
+                <p>Investigating employee attrition patterns and trends.</p>
+                <a href="#">View Details</a>
+            </div>
+            <div class="project">
+                <img src="adventure_works_dashboard.jpg" alt="Adventure Works Analysis Dashboard">
+                <h3>Adventure Works Analysis</h3>
+                <p>Business intelligence insights from Adventure Works dataset.</p>
+                <a href="#">View Details</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm [Your Name], a data analyst passionate about turning raw data into actionable insights. My expertise lies in data visualization, analytics, and storytelling through data-driven projects.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">Your GitHub</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const projects = document.querySelectorAll(".project");
+            projects.forEach(project => {
+                project.addEventListener("mouseenter", () => {
+                    project.style.transform = "scale(1.05)";
+                });
+                project.addEventListener("mouseleave", () => {
+                    project.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
